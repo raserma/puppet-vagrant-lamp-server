@@ -4,12 +4,16 @@ class apache::packages {
 		logoutput	=> true,
 
    	}
-	exec{"update":
+	/*exec{"update":
 		command		=> "yum update -y",
 	}
-	->
+	->*/
 	package {"httpd":
 		ensure => present,
 	}
-
+	->
+	package {"httpd-devel":
+		ensure => present,
+	}
+	
 }
