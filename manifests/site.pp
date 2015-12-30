@@ -1,13 +1,13 @@
 node default{
-	#stage {[apache, mysql, php, phpmyadmin]:}
-	#Stage[apache] -> Stage[mysql] -> Stage [php] -> Stage[phpmyadmin]
+	stage {[apache, mysql]:}#, php, phpmyadmin]:}
+	Stage[apache] -> Stage[mysql] #-> Stage [php] -> Stage[phpmyadmin]
 	class { 'apache':
-	#	stage	=> apache,
+		stage	=> apache,
 	}
-	/*class { 'mysql':
+	class { 'mysql':
 		stage	=> mysql,
 	}
-	class { 'php':
+	/*class { 'php':
 		stage	=> php,
 	}
 	class { 'phpmyadmin':
