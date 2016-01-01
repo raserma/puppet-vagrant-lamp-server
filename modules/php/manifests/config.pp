@@ -8,8 +8,4 @@ class php::config {
 	exec {'replace_conf_apache':
 		command	=> "/bin/sed -i '/AllowOverride None/c AllowOverride All' /etc/httpd/conf/httpd.conf",
 	}
-	->
-	exec {'restart_apache':
-		command	=> "/etc/init.d/httpd restart",
-	}
 }
