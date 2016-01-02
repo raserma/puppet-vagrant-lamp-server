@@ -1,4 +1,4 @@
-Vagrant LAMP stack
+LAMP stack with Vagrant and Puppet
 ==================
 It creates a simple LAMP (Linux, Apache, MySQL, PHP) stack on Vagrant by using Puppet provisioning tool.
 
